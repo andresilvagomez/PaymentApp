@@ -29,7 +29,7 @@ protocol ApiRequestProtocol: class {
 }
 
 class Api {
-    static func request(_ request: ApiRequestProtocol, handler: ApiHandler?) {
+    func request(_ request: ApiRequestProtocol, handler: ApiHandler?) {
         guard let urlRequest = build(request: request) else {
             let error = NSError(domain: "", code: 0, userInfo: [:])
             handler?(error)
@@ -58,7 +58,7 @@ class Api {
         }
     }
 
-    private static func uri(request: ApiRequestProtocol) -> URL? {
+    func uri(request: ApiRequestProtocol) -> URL? {
         let url = URL(string: request.url)
 
         if request.method == .post {
@@ -81,7 +81,7 @@ class Api {
         return urlComponents.url
     }
 
-    private static func build(request: ApiRequestProtocol) -> URLRequest? {
+    private func build(request: ApiRequestProtocol) -> URLRequest? {
         guard let uri = uri(request: request) else {
             return nil
         }
@@ -101,7 +101,7 @@ class Api {
         return urlRequest
     }
 
-    private static func jsonData(request: ApiRequestProtocol) -> Data? {
+    private func jsonData(request: ApiRequestProtocol) -> Data? {
         guard let parameters = request.parameters else {
             return nil
         }

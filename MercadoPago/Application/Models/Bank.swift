@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Bank: Codable {
+class Bank: Codable {
     var id: String
     var name: String
     var secureThumbnail: String

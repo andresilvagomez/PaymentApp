@@ -20,5 +20,6 @@ class CreditCardTableViewCell: UITableViewCell {
     func setUp(with card: CreditCard) {
         cardImage.setImage(string: card.secureThumbnail)
         cardNameLabel.text = card.name
+        accessoryType = card.isSelected ? .checkmark : .none
     }
 }

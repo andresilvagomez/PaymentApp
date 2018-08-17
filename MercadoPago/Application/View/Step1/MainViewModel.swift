@@ -15,16 +15,25 @@ protocol MainViewModelDelegate: class {
 
 class MainViewModel {
     private var cards = [CreditCard]()
+    private var api: Api
 
     weak var delegate: MainViewModelDelegate?
+
+    var selectedCard: CreditCard {
+        return cards.first(where: { $0.isSelected == true })!
+    }
 
     var numberOfItems: Int {
         return cards.count
     }
 
-    init() {
+    init(api: Api) {
+        self.api = api
+    }
+
+    func request() {
         let request = Api.PaymentMethods()
-        Api.request(request) { [weak self] (response) in
+        api.request(request) { [weak self] (response) in
             if let error = response as? Error {
                 self?.delegate?.errorFetchingApi(error)
                 return
@@ -37,6 +46,12 @@ class MainViewModel {
             self?.cards = cards
             self?.delegate?.reloadData()
         }
+    }
+
+    func select(at indexPath: IndexPath) {
+        cards.forEach({ $0.isSelected = false })
+        cards[indexPath.row].isSelected = true
+        delegate?.reloadData()
     }
 
     func card(at indexPath: IndexPath) -> CreditCard {
