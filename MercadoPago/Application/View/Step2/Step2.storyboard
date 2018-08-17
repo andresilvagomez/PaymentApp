@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="630"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BankCell" rowHeight="70" id="FLp-gw-aae" customClass="CreditCardTableViewCell" customModule="MercadoPago" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BankCell" rowHeight="70" id="FLp-gw-aae" customClass="BankTableViewCell" customModule="MercadoPago" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FLp-gw-aae" id="eUg-Jl-oRF">
@@ -132,4 +132,5 @@
             <point key="canvasLocation" x="1838" y="114"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="1" green="0.58039215690000001" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -8,24 +8,32 @@
 
 import UIKit
 
-class PaymentMethodsViewController: StepsViewController {
+class PaymentMethodsViewController: NextViewController {
     @IBOutlet weak var tableView: UITableView!
 
-    private var viewModel: MainViewModel!
+    private var viewModel: CollectionViewModel<CreditCard>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel = CoordinatorViewModel.shared.getPaymentsViewModel()
+        viewModel = CoordinatorViewModel.shared.paymentsViewModel
         viewModel.delegate = self
-        viewModel.request()
+        viewModel.requestApi()
 
         nextButton.setTitle("Select a payment method", for: .disabled)
         nextButton.setTitle("Next", for: .normal)
     }
 }
 
-extension PaymentMethodsViewController: MainViewModelDelegate {
+extension PaymentMethodsViewController: CollectionViewModelDelegate {
+    func startLoadingApi() {
+
+    }
+
+    func endLoadingApi() {
+
+    }
+
     func errorFetchingApi(_ error: Error) {
 
     }
@@ -51,7 +59,8 @@ extension PaymentMethodsViewController: UITableViewDataSource {
         let identifier = "CreditCardCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
             as? CreditCardTableViewCell
-        cell?.setUp(with: viewModel.card(at: indexPath))
+        cell?.setUp(with: viewModel.item(at: indexPath))
+        cell?.accessoryType = viewModel.isSelected(at: indexPath) ? .checkmark : .none
         return cell ?? UITableViewCell()
     }
 }

@@ -16,7 +16,7 @@ enum CreditCardType: String {
     case ticket = "ticket"
 }
 
-class CreditCard: JSONMapper {
+struct CreditCard: JSONMapper {
     var id: String
     var name: String
     var paymentTypeId: CreditCardType
@@ -26,9 +26,7 @@ class CreditCard: JSONMapper {
     var minAllowedAmount: Double
     var maxAllowedAmount: Double
 
-    var isSelected: Bool = false
-
-    required init(json: JSON) {
+    init(json: JSON) {
         self.id = json["id"].stringValue
         self.name = json["name"].stringValue
         self.paymentTypeId = CreditCardType(
@@ -40,5 +38,11 @@ class CreditCard: JSONMapper {
 
         self.minAllowedAmount = json["min_allowed_amount"].doubleValue
         self.maxAllowedAmount = json["max_allowed_amount"].doubleValue
+    }
+}
+
+extension CreditCard: Equatable {
+    static func == (lhs: CreditCard, rhs: CreditCard) -> Bool {
+        return lhs.id == rhs.id
     }
 }

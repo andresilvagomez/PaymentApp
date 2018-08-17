@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StepsViewController: UIViewController {
+class NextViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var nextView: UIView!
 

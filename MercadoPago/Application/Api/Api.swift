@@ -75,7 +75,7 @@ class Api {
 
         urlComponents.queryItems = []
         for (key, value) in parameters {
-            let item = URLQueryItem(name: key, value: value as? String)
+            let item = URLQueryItem(name: key, value: "\(value)")
             urlComponents.queryItems?.append(item)
         }
         return urlComponents.url

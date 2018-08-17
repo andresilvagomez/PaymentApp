@@ -24,21 +24,26 @@
 		9F5EAEFE212726F3003C38FA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5EAEFD212726F3003C38FA /* Color.swift */; };
 		9F5EAF0021272B69003C38FA /* Step2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5EAEFF21272B69003C38FA /* Step2.storyboard */; };
 		9F5EAF0221272BD9003C38FA /* BanksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5EAF0121272BD9003C38FA /* BanksViewController.swift */; };
-		9F5EAF0421272C14003C38FA /* StepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5EAF0321272C14003C38FA /* StepsViewController.swift */; };
+		9F5EAF0421272C14003C38FA /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5EAF0321272C14003C38FA /* NextViewController.swift */; };
 		9F5EAF0621272CE6003C38FA /* Step1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5EAF0521272CE6003C38FA /* Step1.storyboard */; };
 		9F5EAF0821272D66003C38FA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5EAF0721272D66003C38FA /* MainViewController.swift */; };
 		9F5EAF0A21272FAE003C38FA /* Step3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5EAF0921272FAE003C38FA /* Step3.storyboard */; };
 		9F5EAF0C2127308E003C38FA /* CoordinatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5EAF0B2127308E003C38FA /* CoordinatorViewModel.swift */; };
-		9F5EAF0E2127314F003C38FA /* BanksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5EAF0D2127314F003C38FA /* BanksViewModel.swift */; };
 		9FAAA69621268F49009005DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FAAA69521268F49009005DD /* Main.storyboard */; };
 		9FAAA69821268F82009005DD /* PaymentMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAAA69721268F82009005DD /* PaymentMethodsViewController.swift */; };
-		9FAAA69A21268F9B009005DD /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAAA69921268F9B009005DD /* MainViewModel.swift */; };
 		9FAAA69C21269729009005DD /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAAA69B21269729009005DD /* SwiftyJSON.framework */; };
 		9FAAA69E2126972C009005DD /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAAA69B21269729009005DD /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9FAAA6A121269C3A009005DD /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAAA6A021269C3A009005DD /* UIImage.swift */; };
 		9FAAA6A321269C54009005DD /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAAA6A221269C54009005DD /* Kingfisher.framework */; };
 		9FAAA6A521269C58009005DD /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAAA6A221269C54009005DD /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9FAAA6A721269CEA009005DD /* CreditCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAAA6A621269CEA009005DD /* CreditCardTableViewCell.swift */; };
+		9FB1FC6021276386008B6326 /* BankTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1FC5F21276386008B6326 /* BankTableViewCell.swift */; };
+		9FB1FC6221276547008B6326 /* Installment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1FC6121276547008B6326 /* Installment.swift */; };
+		9FB1FC64212767BD008B6326 /* InstallmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1FC63212767BD008B6326 /* InstallmentViewController.swift */; };
+		9FB1FC6821276859008B6326 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1FC6721276859008B6326 /* CollectionViewModel.swift */; };
+		9FB1FC7221277B08008B6326 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1FC7121277B08008B6326 /* ViewController.swift */; };
+		9FB1FC7421277BDC008B6326 /* BRYXBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1FC7321277BDC008B6326 /* BRYXBanner.framework */; };
+		9FB1FC7621277BDF008B6326 /* BRYXBanner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1FC7321277BDC008B6326 /* BRYXBanner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E7F0D791DE228C9E5CE12DDD /* Pods_MercadoPago.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2373F31D194159A8965834A4 /* Pods_MercadoPago.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +72,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				9FAAA6A521269C58009005DD /* Kingfisher.framework in Embed Frameworks */,
+				9FB1FC7621277BDF008B6326 /* BRYXBanner.framework in Embed Frameworks */,
 				9FAAA69E2126972C009005DD /* SwiftyJSON.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -103,19 +109,23 @@
 		9F5EAEFD212726F3003C38FA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		9F5EAEFF21272B69003C38FA /* Step2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Step2.storyboard; sourceTree = "<group>"; };
 		9F5EAF0121272BD9003C38FA /* BanksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksViewController.swift; sourceTree = "<group>"; };
-		9F5EAF0321272C14003C38FA /* StepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsViewController.swift; sourceTree = "<group>"; };
+		9F5EAF0321272C14003C38FA /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		9F5EAF0521272CE6003C38FA /* Step1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Step1.storyboard; sourceTree = "<group>"; };
 		9F5EAF0721272D66003C38FA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9F5EAF0921272FAE003C38FA /* Step3.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Step3.storyboard; sourceTree = "<group>"; };
 		9F5EAF0B2127308E003C38FA /* CoordinatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorViewModel.swift; sourceTree = "<group>"; };
-		9F5EAF0D2127314F003C38FA /* BanksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksViewModel.swift; sourceTree = "<group>"; };
 		9FAAA69521268F49009005DD /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9FAAA69721268F82009005DD /* PaymentMethodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsViewController.swift; sourceTree = "<group>"; };
-		9FAAA69921268F9B009005DD /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		9FAAA69B21269729009005DD /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		9FAAA6A021269C3A009005DD /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		9FAAA6A221269C54009005DD /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		9FAAA6A621269CEA009005DD /* CreditCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardTableViewCell.swift; sourceTree = "<group>"; };
+		9FB1FC5F21276386008B6326 /* BankTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTableViewCell.swift; sourceTree = "<group>"; };
+		9FB1FC6121276547008B6326 /* Installment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Installment.swift; sourceTree = "<group>"; };
+		9FB1FC63212767BD008B6326 /* InstallmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentViewController.swift; sourceTree = "<group>"; };
+		9FB1FC6721276859008B6326 /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
+		9FB1FC7121277B08008B6326 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9FB1FC7321277BDC008B6326 /* BRYXBanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BRYXBanner.framework; path = Carthage/Build/iOS/BRYXBanner.framework; sourceTree = "<group>"; };
 		B6C01044A4E05DF944E25575 /* Pods_MercadoPagoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadoPagoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF456A3C08DF4B89E379CE73 /* Pods-MercadoPagoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoPagoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoPagoTests/Pods-MercadoPagoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FB1FC7421277BDC008B6326 /* BRYXBanner.framework in Frameworks */,
 				9FAAA6A321269C54009005DD /* Kingfisher.framework in Frameworks */,
 				E7F0D791DE228C9E5CE12DDD /* Pods_MercadoPago.framework in Frameworks */,
 				9FAAA69C21269729009005DD /* SwiftyJSON.framework in Frameworks */,
@@ -153,6 +164,7 @@
 		86A440A7AC842657AEB4B119 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9FB1FC7321277BDC008B6326 /* BRYXBanner.framework */,
 				9FAAA6A221269C54009005DD /* Kingfisher.framework */,
 				9FAAA69B21269729009005DD /* SwiftyJSON.framework */,
 				2373F31D194159A8965834A4 /* Pods_MercadoPago.framework */,
@@ -198,6 +210,7 @@
 			children = (
 				9F2A3A8521268D990076770E /* Mapper.swift */,
 				9FAAA6A021269C3A009005DD /* UIImage.swift */,
+				9FB1FC7121277B08008B6326 /* ViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -205,6 +218,7 @@
 		9F2A3A7221267EE90076770E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9FB1FC6B212772F6008B6326 /* Generics */,
 				9FAAA69421268F40009005DD /* Main */,
 				9F2A3A8321268BBB0076770E /* Step3 */,
 				9F2A3A8221268BB60076770E /* Step2 */,
@@ -218,6 +232,7 @@
 			children = (
 				9F2A3A7721267F6E0076770E /* CreditCard.swift */,
 				9F2A3A79212680A90076770E /* Bank.swift */,
+				9FB1FC6121276547008B6326 /* Installment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -225,6 +240,8 @@
 		9F2A3A7421267EF50076770E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9FB1FC6721276859008B6326 /* CollectionViewModel.swift */,
+				9F5EAF0B2127308E003C38FA /* CoordinatorViewModel.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -250,7 +267,6 @@
 			isa = PBXGroup;
 			children = (
 				9FAAA69721268F82009005DD /* PaymentMethodsViewController.swift */,
-				9FAAA69921268F9B009005DD /* MainViewModel.swift */,
 				9FAAA6A621269CEA009005DD /* CreditCardTableViewCell.swift */,
 				9F5EAF0521272CE6003C38FA /* Step1.storyboard */,
 			);
@@ -262,7 +278,7 @@
 			children = (
 				9F5EAEFF21272B69003C38FA /* Step2.storyboard */,
 				9F5EAF0121272BD9003C38FA /* BanksViewController.swift */,
-				9F5EAF0D2127314F003C38FA /* BanksViewModel.swift */,
+				9FB1FC5F21276386008B6326 /* BankTableViewCell.swift */,
 			);
 			path = Step2;
 			sourceTree = "<group>";
@@ -271,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				9F5EAF0921272FAE003C38FA /* Step3.storyboard */,
+				9FB1FC63212767BD008B6326 /* InstallmentViewController.swift */,
 			);
 			path = Step3;
 			sourceTree = "<group>";
@@ -331,11 +348,17 @@
 			isa = PBXGroup;
 			children = (
 				9FAAA69521268F49009005DD /* Main.storyboard */,
-				9F5EAF0321272C14003C38FA /* StepsViewController.swift */,
 				9F5EAF0721272D66003C38FA /* MainViewController.swift */,
-				9F5EAF0B2127308E003C38FA /* CoordinatorViewModel.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		9FB1FC6B212772F6008B6326 /* Generics */ = {
+			isa = PBXGroup;
+			children = (
+				9F5EAF0321272C14003C38FA /* NextViewController.swift */,
+			);
+			path = Generics;
 			sourceTree = "<group>";
 		};
 		F4948E7A70A785DB2EDCA18C /* Pods */ = {
@@ -564,21 +587,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FAAA69821268F82009005DD /* PaymentMethodsViewController.swift in Sources */,
+				9FB1FC7221277B08008B6326 /* ViewController.swift in Sources */,
 				9F2A3A802126876D0076770E /* ApiDefinition.swift in Sources */,
 				9F5EAEFE212726F3003C38FA /* Color.swift in Sources */,
 				9F2A3A7821267F6E0076770E /* CreditCard.swift in Sources */,
 				9F2A3A7A212680A90076770E /* Bank.swift in Sources */,
+				9FB1FC6021276386008B6326 /* BankTableViewCell.swift in Sources */,
 				9F2A3A7E212681B10076770E /* Api.swift in Sources */,
 				9F5EAF0C2127308E003C38FA /* CoordinatorViewModel.swift in Sources */,
+				9FB1FC6821276859008B6326 /* CollectionViewModel.swift in Sources */,
 				9F2A3A8621268D990076770E /* Mapper.swift in Sources */,
 				9F5EAF0821272D66003C38FA /* MainViewController.swift in Sources */,
 				9FAAA6A121269C3A009005DD /* UIImage.swift in Sources */,
-				9F5EAF0E2127314F003C38FA /* BanksViewModel.swift in Sources */,
-				9F5EAF0421272C14003C38FA /* StepsViewController.swift in Sources */,
+				9F5EAF0421272C14003C38FA /* NextViewController.swift in Sources */,
 				9F3658BD2125ECEF00A917C6 /* AppDelegate.swift in Sources */,
+				9FB1FC64212767BD008B6326 /* InstallmentViewController.swift in Sources */,
 				9FAAA6A721269CEA009005DD /* CreditCardTableViewCell.swift in Sources */,
 				9F5EAF0221272BD9003C38FA /* BanksViewController.swift in Sources */,
-				9FAAA69A21268F9B009005DD /* MainViewModel.swift in Sources */,
+				9FB1FC6221276547008B6326 /* Installment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

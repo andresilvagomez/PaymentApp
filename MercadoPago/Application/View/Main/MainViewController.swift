@@ -8,10 +8,22 @@
 
 import UIKit
 
-class MainViewController: StepsViewController {
+class MainViewController: NextViewController {
+    private var viewModel = CoordinatorViewModel.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         enableNextButton()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if viewModel.completed {
+            
+        } else {
+            
+        }
     }
 }

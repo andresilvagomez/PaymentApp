@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreditCardTableViewCell: UITableViewCell {
+class BankTableViewCell: UITableViewCell {
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var cardNameLabel: UILabel!
 
@@ -17,8 +17,8 @@ class CreditCardTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    func setUp(with card: CreditCard) {
-        cardImage.setImage(string: card.secureThumbnail)
-        cardNameLabel.text = card.name
+    func setUp(with bank: Bank) {
+        cardImage.setImage(string: bank.secureThumbnail)
+        cardNameLabel.text = bank.name
     }
 }

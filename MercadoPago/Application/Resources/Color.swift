@@ -14,7 +14,10 @@ extension UIColor {
 
     static let appGray = UIColor.lightGray
 
+    static let appRed = UIColor.red
+
     static let buttonEnabled = UIColor.appOrange
+
     static let buttonDisabled = UIColor.appGray
 
 }

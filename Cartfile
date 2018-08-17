@@ -1,2 +1,4 @@
 github "SwiftyJSON/SwiftyJSON"
 github "onevcat/Kingfisher"
+github "dzenbot/DZNEmptyDataSet"
+github "bryx-inc/BRYXBanner"

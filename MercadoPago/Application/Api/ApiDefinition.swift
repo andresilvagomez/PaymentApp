@@ -35,14 +35,14 @@ extension Api {
 
     class CardIssuers: ApiRequestProtocol {
         var method: HttpMethods = .get
-        var url: String = baseUrl + "card_issuers"
+        var url: String = baseUrl + "payment_methods/card_issuers"
         var headers: [String: String]? = [:]
         var parameters: [String: Any]?
 
-        init(paymentMethodId: String) {
+        init(paymentMethodId: String?) {
             self.parameters = [
                 "public_key": apiKey,
-                "payment_method_id": paymentMethodId
+                "payment_method_id": paymentMethodId ?? ""
             ]
         }
 
@@ -52,21 +52,24 @@ extension Api {
                 return
             }
 
+            guard let data = data else { return }
+            let banks = data.mapArray() as [Bank]
+            handler?(banks)
         }
     }
 
     class Installments: ApiRequestProtocol {
         var method: HttpMethods = .get
-        var url: String = baseUrl + "card_issuers"
+        var url: String = baseUrl + "payment_methods/installments"
         var headers: [String: String]? = [:]
         var parameters: [String: Any]?
 
-        init(paymentMethodId: String, issuerId: Int, amount: Double) {
+        init(paymentMethodId: String?, issuerId: Int?, amount: Double) {
             self.parameters = [
                 "public_key": apiKey,
                 "amount": amount,
-                "payment_method_id": paymentMethodId,
-                "issuer.id": issuerId
+                "payment_method_id": paymentMethodId ?? "",
+                "issuer.id": issuerId ?? ""
             ]
         }
 
@@ -75,6 +78,10 @@ extension Api {
                 handler?(error)
                 return
             }
+
+            guard let data = data?.arrayValue.first else { return }
+            let items = data["payer_costs"].mapArray() as [Installment]
+            handler?(items)
         }
     }
 }
