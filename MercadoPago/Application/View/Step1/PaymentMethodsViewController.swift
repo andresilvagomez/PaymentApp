@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DZNEmptyDataSet
 
 class PaymentMethodsViewController: NextViewController {
     @IBOutlet weak var tableView: UITableView!
@@ -15,6 +16,8 @@ class PaymentMethodsViewController: NextViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        tableView.emptyDataSetSource = self
 
         viewModel = CoordinatorViewModel.shared.paymentsViewModel
         viewModel.delegate = self
@@ -26,16 +29,8 @@ class PaymentMethodsViewController: NextViewController {
 }
 
 extension PaymentMethodsViewController: CollectionViewModelDelegate {
-    func startLoadingApi() {
-
-    }
-
-    func endLoadingApi() {
-
-    }
-
     func errorFetchingApi(_ error: Error) {
-
+        banner(error: error)
     }
 
     func reloadData() {
@@ -62,5 +57,11 @@ extension PaymentMethodsViewController: UITableViewDataSource {
         cell?.setUp(with: viewModel.item(at: indexPath))
         cell?.accessoryType = viewModel.isSelected(at: indexPath) ? .checkmark : .none
         return cell ?? UITableViewCell()
+    }
+}
+
+extension PaymentMethodsViewController: DZNEmptyDataSetSource {
+    func customView(forEmptyDataSet scrollView: UIScrollView!) -> UIView! {
+        return UIActivityIndicatorView(activityIndicatorStyle: .gray)
     }
 }

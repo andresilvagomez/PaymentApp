@@ -44,6 +44,9 @@
 		9FB1FC7221277B08008B6326 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1FC7121277B08008B6326 /* ViewController.swift */; };
 		9FB1FC7421277BDC008B6326 /* BRYXBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1FC7321277BDC008B6326 /* BRYXBanner.framework */; };
 		9FB1FC7621277BDF008B6326 /* BRYXBanner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1FC7321277BDC008B6326 /* BRYXBanner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9FB1FC7821278ECC008B6326 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1FC7721278ECC008B6326 /* Error.swift */; };
+		9FB1FC7A21279273008B6326 /* DZNEmptyDataSet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1FC7921279273008B6326 /* DZNEmptyDataSet.framework */; };
+		9FB1FC7C21279276008B6326 /* DZNEmptyDataSet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB1FC7921279273008B6326 /* DZNEmptyDataSet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E7F0D791DE228C9E5CE12DDD /* Pods_MercadoPago.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2373F31D194159A8965834A4 /* Pods_MercadoPago.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +76,7 @@
 			files = (
 				9FAAA6A521269C58009005DD /* Kingfisher.framework in Embed Frameworks */,
 				9FB1FC7621277BDF008B6326 /* BRYXBanner.framework in Embed Frameworks */,
+				9FB1FC7C21279276008B6326 /* DZNEmptyDataSet.framework in Embed Frameworks */,
 				9FAAA69E2126972C009005DD /* SwiftyJSON.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -126,6 +130,8 @@
 		9FB1FC6721276859008B6326 /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 		9FB1FC7121277B08008B6326 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9FB1FC7321277BDC008B6326 /* BRYXBanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BRYXBanner.framework; path = Carthage/Build/iOS/BRYXBanner.framework; sourceTree = "<group>"; };
+		9FB1FC7721278ECC008B6326 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		9FB1FC7921279273008B6326 /* DZNEmptyDataSet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DZNEmptyDataSet.framework; path = Carthage/Build/iOS/DZNEmptyDataSet.framework; sourceTree = "<group>"; };
 		B6C01044A4E05DF944E25575 /* Pods_MercadoPagoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MercadoPagoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF456A3C08DF4B89E379CE73 /* Pods-MercadoPagoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MercadoPagoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MercadoPagoTests/Pods-MercadoPagoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FB1FC7A21279273008B6326 /* DZNEmptyDataSet.framework in Frameworks */,
 				9FB1FC7421277BDC008B6326 /* BRYXBanner.framework in Frameworks */,
 				9FAAA6A321269C54009005DD /* Kingfisher.framework in Frameworks */,
 				E7F0D791DE228C9E5CE12DDD /* Pods_MercadoPago.framework in Frameworks */,
@@ -164,6 +171,7 @@
 		86A440A7AC842657AEB4B119 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9FB1FC7921279273008B6326 /* DZNEmptyDataSet.framework */,
 				9FB1FC7321277BDC008B6326 /* BRYXBanner.framework */,
 				9FAAA6A221269C54009005DD /* Kingfisher.framework */,
 				9FAAA69B21269729009005DD /* SwiftyJSON.framework */,
@@ -211,6 +219,7 @@
 				9F2A3A8521268D990076770E /* Mapper.swift */,
 				9FAAA6A021269C3A009005DD /* UIImage.swift */,
 				9FB1FC7121277B08008B6326 /* ViewController.swift */,
+				9FB1FC7721278ECC008B6326 /* Error.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -594,6 +603,7 @@
 				9F2A3A7A212680A90076770E /* Bank.swift in Sources */,
 				9FB1FC6021276386008B6326 /* BankTableViewCell.swift in Sources */,
 				9F2A3A7E212681B10076770E /* Api.swift in Sources */,
+				9FB1FC7821278ECC008B6326 /* Error.swift in Sources */,
 				9F5EAF0C2127308E003C38FA /* CoordinatorViewModel.swift in Sources */,
 				9FB1FC6821276859008B6326 /* CollectionViewModel.swift in Sources */,
 				9F2A3A8621268D990076770E /* Mapper.swift in Sources */,

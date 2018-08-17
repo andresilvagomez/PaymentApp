@@ -12,14 +12,14 @@ import BRYXBanner
 extension UIViewController {
 
     func banner(error: Error) {
-        let message = error.localizedDescription
+        let message = error.message
         Banner(
             title: "Error",
             subtitle: message,
             image: nil,
             backgroundColor: UIColor.appRed,
             didTapBlock: nil
-        ).show(view, duration: 0.3)
+        ).show()
     }
 
 }

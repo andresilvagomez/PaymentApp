@@ -27,8 +27,13 @@ extension Api {
 
             guard let data = data else { return }
             var creditCards = data.mapArray() as [CreditCard]
-
             creditCards = creditCards.filter({ $0.paymentTypeId == .creditCard && $0.status })
+
+            if creditCards.count == 0 {
+                handler?(NSError.emptyData)
+                return
+            }
+
             handler?(creditCards)
         }
     }
@@ -54,6 +59,12 @@ extension Api {
 
             guard let data = data else { return }
             let banks = data.mapArray() as [Bank]
+
+            if banks.count == 0 {
+                handler?(NSError.emptyData)
+                return
+            }
+
             handler?(banks)
         }
     }
@@ -81,6 +92,12 @@ extension Api {
 
             guard let data = data?.arrayValue.first else { return }
             let items = data["payer_costs"].mapArray() as [Installment]
+
+            if items.count == 0 {
+                handler?(NSError.emptyData)
+                return
+            }
+
             handler?(items)
         }
     }

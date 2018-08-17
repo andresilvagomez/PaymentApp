@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DZNEmptyDataSet
 
 class BanksViewController: NextViewController {
     @IBOutlet weak var tableView: UITableView!
@@ -15,6 +16,8 @@ class BanksViewController: NextViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        tableView.emptyDataSetSource = self
 
         viewModel = CoordinatorViewModel.shared.banksViewModel
         viewModel.delegate = self
@@ -26,14 +29,6 @@ class BanksViewController: NextViewController {
 }
 
 extension BanksViewController: CollectionViewModelDelegate {
-    func startLoadingApi() {
-
-    }
-
-    func endLoadingApi() {
-
-    }
-
     func errorFetchingApi(_ error: Error) {
         banner(error: error)
     }
@@ -61,5 +56,11 @@ extension BanksViewController: UITableViewDataSource {
         cell?.setUp(with: viewModel.item(at: indexPath))
         cell?.accessoryType = viewModel.isSelected(at: indexPath) ? .checkmark : .none
         return cell ?? UITableViewCell()
+    }
+}
+
+extension BanksViewController: DZNEmptyDataSetSource {
+    func customView(forEmptyDataSet scrollView: UIScrollView!) -> UIView! {
+        return UIActivityIndicatorView(activityIndicatorStyle: .gray)
     }
 }

@@ -31,7 +31,7 @@ protocol ApiRequestProtocol: class {
 class Api {
     func request(_ request: ApiRequestProtocol, handler: ApiHandler?) {
         guard let urlRequest = build(request: request) else {
-            let error = NSError(domain: "", code: 0, userInfo: [:])
+            let error = NSError(message: "We can't build your request")
             handler?(error)
             return
         }
@@ -43,7 +43,7 @@ class Api {
                 }
 
                 guard let data = data else {
-                    let error = NSError(domain: "", code: -1, userInfo: [:])
+                    let error = NSError(message: "We can't parse access to response data")
                     handler?(error)
                     return
                 }

@@ -11,8 +11,6 @@ import Foundation
 protocol CollectionViewModelDelegate: class {
     func errorFetchingApi(_ error: Error)
     func reloadData()
-    func startLoadingApi()
-    func endLoadingApi()
 }
 
 class CollectionViewModel<T: Equatable> {
@@ -38,10 +36,7 @@ class CollectionViewModel<T: Equatable> {
     }
 
     func requestApi() {
-        delegate?.startLoadingApi()
         api.request(request) { [weak self] (response) in
-            self?.delegate?.endLoadingApi()
-
             if let error = response as? Error {
                 self?.delegate?.errorFetchingApi(error)
                 return

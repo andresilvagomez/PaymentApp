@@ -58,7 +58,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -77,6 +77,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="MercadoPago" id="ksF-qw-Nu9"/>
                     <connections>
+                        <outlet property="amonthTextField" destination="2wF-uG-r8p" id="Xnm-lQ-xEb"/>
+                        <outlet property="bottomLayout" destination="LPW-aJ-7Ug" id="S8i-u2-pgT"/>
                         <outlet property="nextButton" destination="EEp-tk-Ir6" id="IMC-n2-4I3"/>
                         <outlet property="nextView" destination="qqb-0E-2rP" id="OxX-QM-q9Y"/>
                     </connections>

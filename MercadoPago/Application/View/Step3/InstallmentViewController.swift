@@ -17,6 +17,8 @@ class InstallmentViewController: NextViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.emptyDataSetSource = self
+
         viewModel = CoordinatorViewModel.shared.installmentViewModel
         viewModel.delegate = self
         viewModel.requestApi()
@@ -31,14 +33,6 @@ class InstallmentViewController: NextViewController {
 }
 
 extension InstallmentViewController: CollectionViewModelDelegate {
-    func startLoadingApi() {
-
-    }
-
-    func endLoadingApi() {
-
-    }
-
     func errorFetchingApi(_ error: Error) {
         banner(error: error)
     }

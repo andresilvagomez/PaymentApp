@@ -17,7 +17,7 @@ class CoordinatorViewModel {
     private var selectedBank: Bank?
     private var selectedInstallment: Installment?
     private var amounth: Double = 20.0
-    
+
     var completed: Bool {
         return  selectedCard != nil &&
                 selectedBank != nil &&
@@ -26,6 +26,10 @@ class CoordinatorViewModel {
 
     init() {
         self.api = Api()
+    }
+
+    func update(amounth: Double) {
+        self.amounth = amounth
     }
 }
 
