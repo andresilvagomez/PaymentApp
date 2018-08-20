@@ -92,6 +92,7 @@ class MainViewController: NextViewController {
             guard let `self` = self else { return }
 
             self.amonthTextField.text = nil
+            self.disableNextButton()
             self.viewModel.clear()
             self.viewWillAppear(true)
             self.viewDidAppear(true)
