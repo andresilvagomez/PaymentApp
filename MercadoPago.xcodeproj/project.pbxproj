@@ -35,6 +35,7 @@
 		9F8B319C212B3B130046D20D /* StepImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F8B319B212B3B130046D20D /* StepImageCell.xib */; };
 		9F8B319F212B3C950046D20D /* SubTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F8B319E212B3C950046D20D /* SubTitleCell.xib */; };
 		9F8B31A1212B3EB40046D20D /* UINib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8B31A0212B3EB40046D20D /* UINib.swift */; };
+		9F8B31A4212B61170046D20D /* SelectedPaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8B31A3212B61170046D20D /* SelectedPaymentViewModel.swift */; };
 		9FAAA69621268F49009005DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FAAA69521268F49009005DD /* Main.storyboard */; };
 		9FAAA69821268F82009005DD /* PaymentMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAAA69721268F82009005DD /* PaymentMethodsViewController.swift */; };
 		9FAAA69C21269729009005DD /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAAA69B21269729009005DD /* SwiftyJSON.framework */; };
@@ -128,6 +129,7 @@
 		9F8B319B212B3B130046D20D /* StepImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepImageCell.xib; sourceTree = "<group>"; };
 		9F8B319E212B3C950046D20D /* SubTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubTitleCell.xib; sourceTree = "<group>"; };
 		9F8B31A0212B3EB40046D20D /* UINib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINib.swift; sourceTree = "<group>"; };
+		9F8B31A3212B61170046D20D /* SelectedPaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedPaymentViewModel.swift; sourceTree = "<group>"; };
 		9FAAA69521268F49009005DD /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9FAAA69721268F82009005DD /* PaymentMethodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsViewController.swift; sourceTree = "<group>"; };
 		9FAAA69B21269729009005DD /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 			children = (
 				9FAAA69521268F49009005DD /* Main.storyboard */,
 				9F5EAF0721272D66003C38FA /* MainViewController.swift */,
+				9F8B31A3212B61170046D20D /* SelectedPaymentViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -638,6 +641,7 @@
 				9F3658BD2125ECEF00A917C6 /* AppDelegate.swift in Sources */,
 				9FB1FC64212767BD008B6326 /* InstallmentViewController.swift in Sources */,
 				9F5EAF0221272BD9003C38FA /* BanksViewController.swift in Sources */,
+				9F8B31A4212B61170046D20D /* SelectedPaymentViewModel.swift in Sources */,
 				9FB1FC6221276547008B6326 /* Installment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,7 +15,11 @@ class MainViewController: NextViewController {
 
     @IBOutlet weak var amonthLabel: UILabel!
     @IBOutlet weak var franchiseLabel: UILabel!
+    @IBOutlet weak var franchiseImage: UIImageView!
     @IBOutlet weak var bankLabel: UILabel!
+    @IBOutlet weak var bankImage: UIImageView!
+    @IBOutlet weak var duesLabel: UILabel!
+    @IBOutlet weak var totalLabel: UILabel!
 
     private var viewModel = CoordinatorViewModel.shared
 
@@ -45,6 +49,10 @@ class MainViewController: NextViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         completionView.isHidden = !viewModel.completed
+
+        if viewModel.completed {
+            setUpPaymentDetails()
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -62,8 +70,43 @@ class MainViewController: NextViewController {
         }
     }
 
+    func setUpPaymentDetails() {
+        guard let viewModel = viewModel.selectedViewModel else { return }
+
+        amonthLabel.text = viewModel.amount
+        franchiseLabel.text = viewModel.cardName
+        franchiseImage.setImage(string: viewModel.cardImageUrl)
+        bankLabel.text = viewModel.bankName
+        bankImage.setImage(string: viewModel.bankImageUrl)
+        duesLabel.text = viewModel.duesPayment
+        totalLabel.text = viewModel.totalPayment
+    }
+
+    func showThanksAlert() {
+        let alert = UIAlertController(
+            title: "Thanks",
+            message: "We aprecitate your payment, Enjoy your product",
+            preferredStyle: .alert
+        )
+        let acction = UIAlertAction(title: "Ok", style: .default) { [weak self] (_) in
+            guard let `self` = self else { return }
+
+            self.amonthTextField.text = nil
+            self.viewModel.clear()
+            self.viewWillAppear(true)
+            self.viewDidAppear(true)
+        }
+        alert.addAction(acction)
+        present(alert, animated: true, completion: nil)
+    }
+
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        return !viewModel.completed
+        if viewModel.completed {
+            showThanksAlert()
+            return false
+        }
+
+        return true
     }
 }
 

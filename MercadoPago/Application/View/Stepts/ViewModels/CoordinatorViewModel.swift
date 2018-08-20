@@ -16,7 +16,22 @@ class CoordinatorViewModel {
     private var selectedCard: CreditCard?
     private var selectedBank: Bank?
     private var selectedInstallment: Installment?
-    private var amounth: Double = 20.0
+    private var amounth: Double = 0
+
+    var selectedViewModel: SelectedPaymentViewModel? {
+        guard let selectedCard = selectedCard,
+            let selectedBank = selectedBank,
+            let selectedInstallment = selectedInstallment else {
+            return nil
+        }
+
+        return SelectedPaymentViewModel(
+            amount: amounth,
+            card: selectedCard,
+            bank: selectedBank,
+            installment: selectedInstallment
+        )
+    }
 
     var completed: Bool {
         return  selectedCard != nil &&
@@ -30,6 +45,13 @@ class CoordinatorViewModel {
 
     func update(amounth: Double) {
         self.amounth = amounth
+    }
+
+    func clear() {
+        amounth = 0
+        selectedCard = nil
+        selectedBank = nil
+        selectedInstallment = nil
     }
 }
 
