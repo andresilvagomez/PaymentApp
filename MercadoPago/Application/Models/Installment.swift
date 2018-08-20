@@ -23,7 +23,10 @@ struct Installment: JSONMapper {
     var total: String {
         return "total: $ \(totalAmount)"
     }
+}
 
+// MARK: JSONMapper Protocol
+extension Installment {
     init(json: JSON) {
         self.installments = json["installments"].intValue
         self.recommendedMessage = json["recommended_message"].stringValue
@@ -34,6 +37,7 @@ struct Installment: JSONMapper {
     }
 }
 
+// MARK: Equatable Protocol
 extension Installment: Equatable {
     static func == (lhs: Installment, rhs: Installment) -> Bool {
         return lhs.installments == rhs.installments

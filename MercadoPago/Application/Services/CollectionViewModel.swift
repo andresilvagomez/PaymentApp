@@ -8,12 +8,25 @@
 
 import Foundation
 
+typealias CollectionModel = JSONMapper & Equatable
+
 protocol CollectionViewModelDelegate: class {
     func errorFetchingApi(_ error: Error)
     func reloadData()
 }
 
-class CollectionViewModel<T: Equatable> {
+protocol CollectionViewModelInterface: class {
+    var numberOfItems: Int { get }
+    var delegate: CollectionViewModelDelegate? { get set }
+
+    func requestApi()
+    func isSelected(at indexPath: IndexPath) -> Bool
+    func select(at indexPath: IndexPath)
+    func item(at indexPath: IndexPath) -> CollectionItemViewModel
+    func selected() -> CollectionItemViewModel?
+}
+
+class CollectionViewModel<T: CollectionModel>: CollectionViewModelInterface {
     private var items = [T]()
     private var selectedItem: T? {
         didSet {
@@ -36,9 +49,9 @@ class CollectionViewModel<T: Equatable> {
     }
 
     func requestApi() {
-        api.request(request) { [weak self] (response) in
+        api.request(request) { (response) in
             if let error = response as? Error {
-                self?.delegate?.errorFetchingApi(error)
+                self.delegate?.errorFetchingApi(error)
                 return
             }
 
@@ -46,8 +59,8 @@ class CollectionViewModel<T: Equatable> {
                 return
             }
 
-            self?.items = items
-            self?.delegate?.reloadData()
+            self.items = items
+            self.delegate?.reloadData()
         }
     }
 
@@ -57,15 +70,19 @@ class CollectionViewModel<T: Equatable> {
     }
 
     func select(at indexPath: IndexPath) {
-        selectedItem = item(at: indexPath)
+        selectedItem = items[indexPath.row]
         delegate?.reloadData()
     }
 
-    func item(at indexPath: IndexPath) -> T {
-        return items[indexPath.row]
+    func item(at indexPath: IndexPath) -> CollectionItemViewModel {
+        let item = items[indexPath.row]
+        return CollectionItemViewModel(model: item)
     }
 
-    func selected() -> T? {
-        return selectedItem
+    func selected() -> CollectionItemViewModel? {
+        guard let selectedItem = selectedItem else {
+            return nil
+        }
+        return CollectionItemViewModel(model: selectedItem)
     }
 }

@@ -22,46 +22,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="630"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="A3U-aw-kJH">
-                                    <rect key="frame" x="0.0" y="98" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CreditCardCell" rowHeight="70" id="r5A-dh-KiT" customClass="CreditCardTableViewCell" customModule="MercadoPago" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r5A-dh-KiT" id="HD3-k0-0Vz">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.666666666666671"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rA1-pz-vFY">
-                                                    <rect key="frame" x="16" y="14" width="60" height="40"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="6Wx-vz-uLv"/>
-                                                        <constraint firstAttribute="width" constant="60" id="sM6-Pj-9bT"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jy5-SO-7Z8">
-                                                    <rect key="frame" x="84" y="24" width="275" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="jy5-SO-7Z8" secondAttribute="trailing" constant="16" id="NTY-lR-ldW"/>
-                                                <constraint firstItem="jy5-SO-7Z8" firstAttribute="leading" secondItem="rA1-pz-vFY" secondAttribute="trailing" constant="8" id="YsJ-0E-de9"/>
-                                                <constraint firstItem="jy5-SO-7Z8" firstAttribute="centerY" secondItem="HD3-k0-0Vz" secondAttribute="centerY" id="bSi-kr-cQa"/>
-                                                <constraint firstItem="rA1-pz-vFY" firstAttribute="leading" secondItem="HD3-k0-0Vz" secondAttribute="leading" constant="16" id="fxI-Mq-iIH"/>
-                                                <constraint firstItem="rA1-pz-vFY" firstAttribute="centerY" secondItem="HD3-k0-0Vz" secondAttribute="centerY" id="zg6-ut-aj5"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="cardImage" destination="rA1-pz-vFY" id="cGf-hH-1CN"/>
-                                            <outlet property="cardNameLabel" destination="jy5-SO-7Z8" id="Z3g-ph-5BP"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="lIN-v2-QIa" id="dp7-6B-0K6"/>
                                     <outlet property="delegate" destination="lIN-v2-QIa" id="MK5-mz-vn7"/>

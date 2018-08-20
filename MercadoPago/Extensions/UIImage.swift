@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 
 extension UIImageView {
-    func setImage(string: String?, placeholderImage placeholder: UIImage? = nil) {
+    func setImage(string: String?, placeholderImage placeholder: UIImage? = nil, handler: ( () -> Void )? = nil) {
         guard let url = URL(string: string ?? "") else {
             return
         }
@@ -19,6 +19,7 @@ extension UIImageView {
             if let error = error {
                 print("Error downloading image:", error.localizedDescription)
             }
+            handler?()
         }
     }
 }

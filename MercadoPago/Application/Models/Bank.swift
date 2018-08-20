@@ -9,14 +9,17 @@
 import Foundation
 import SwiftyJSON
 
-struct Bank: JSONMapper {
+struct Bank: CollectionModel {
     var id: Int
     var name: String
     var secureThumbnail: String
     var thumbnail: String
     var processingMode: String
     var merchantAccountId: String
+}
 
+// MARK: JSONMapper Protocol
+extension Bank {
     init(json: JSON) {
         self.id = json["id"].intValue
         self.name = json["name"].stringValue
@@ -27,7 +30,8 @@ struct Bank: JSONMapper {
     }
 }
 
-extension Bank: Equatable {
+// MARK: Equatable Protocol
+extension Bank {
     static func == (lhs: Bank, rhs: Bank) -> Bool {
         return lhs.id == rhs.id
     }

@@ -39,6 +39,8 @@ class Api {
         DispatchQueue.global(qos: .background).async {
             let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
                 guard let response = response as? HTTPURLResponse else {
+                    let error = NSError(message: "We have some error in the response")
+                    handler?(error)
                     return
                 }
 

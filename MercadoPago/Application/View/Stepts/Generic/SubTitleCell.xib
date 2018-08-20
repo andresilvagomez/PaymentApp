@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="78" id="bIl-Yg-opG" customClass="SteptsTableViewCell" customModule="MercadoPago" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bIl-Yg-opG" id="HQ2-bD-5SU">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="77.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DET-ul-DQn">
+                        <rect key="frame" x="16" y="36.5" width="351" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOs-g0-LAy">
+                        <rect key="frame" x="16" y="20.5" width="351" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DET-ul-DQn" firstAttribute="leading" secondItem="HQ2-bD-5SU" secondAttribute="leading" constant="16" id="4gC-OQ-Byo"/>
+                    <constraint firstAttribute="trailing" secondItem="DET-ul-DQn" secondAttribute="trailing" constant="8" id="7xV-kR-ppU"/>
+                    <constraint firstItem="AOs-g0-LAy" firstAttribute="leading" secondItem="HQ2-bD-5SU" secondAttribute="leading" constant="16" id="Pah-pv-9K3"/>
+                    <constraint firstItem="DET-ul-DQn" firstAttribute="centerY" secondItem="HQ2-bD-5SU" secondAttribute="centerY" constant="8" id="tUm-91-Tzh"/>
+                    <constraint firstAttribute="trailing" secondItem="AOs-g0-LAy" secondAttribute="trailing" constant="8" id="wed-vK-Fyv"/>
+                    <constraint firstItem="AOs-g0-LAy" firstAttribute="centerY" secondItem="HQ2-bD-5SU" secondAttribute="centerY" constant="-8" id="z7L-BF-pmX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="detailLabel" destination="DET-ul-DQn" id="HFD-BV-f2g"/>
+                <outlet property="nameLabel" destination="AOs-g0-LAy" id="0ih-iR-VRq"/>
+            </connections>
+            <point key="canvasLocation" x="9.5" y="112"/>
+        </tableViewCell>
+    </objects>
+</document>

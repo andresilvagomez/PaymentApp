@@ -16,7 +16,8 @@ enum CreditCardType: String {
     case ticket = "ticket"
 }
 
-struct CreditCard: JSONMapper {
+// MARK: JSONMapper Protocol
+struct CreditCard: CollectionModel {
     var id: String
     var name: String
     var paymentTypeId: CreditCardType
@@ -25,13 +26,16 @@ struct CreditCard: JSONMapper {
     var thumbnail: String
     var minAllowedAmount: Double
     var maxAllowedAmount: Double
+}
 
+// MARK: Equatable Protocol
+extension CreditCard {
     init(json: JSON) {
         self.id = json["id"].stringValue
         self.name = json["name"].stringValue
         self.paymentTypeId = CreditCardType(
             rawValue: json["payment_type_id"].stringValue
-        ) ?? .none
+            ) ?? .none
         self.status = json["status"].stringValue == "active"
         self.secureThumbnail = json["secure_thumbnail"].stringValue
         self.thumbnail = json["thumbnail"].stringValue
@@ -41,7 +45,7 @@ struct CreditCard: JSONMapper {
     }
 }
 
-extension CreditCard: Equatable {
+extension CreditCard {
     static func == (lhs: CreditCard, rhs: CreditCard) -> Bool {
         return lhs.id == rhs.id
     }

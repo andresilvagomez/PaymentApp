@@ -22,46 +22,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="630"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="OQS-px-Vrg">
-                                    <rect key="frame" x="0.0" y="98" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BankCell" rowHeight="70" id="FLp-gw-aae" customClass="BankTableViewCell" customModule="MercadoPago" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FLp-gw-aae" id="eUg-Jl-oRF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.666666666666671"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CyL-ia-5Zk">
-                                                    <rect key="frame" x="16" y="14" width="60" height="40"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="60" id="Grf-Jj-hPu"/>
-                                                        <constraint firstAttribute="height" constant="40" id="NHJ-pK-ZSG"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glE-bp-CIF">
-                                                    <rect key="frame" x="84" y="24" width="275" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="CyL-ia-5Zk" firstAttribute="centerY" secondItem="eUg-Jl-oRF" secondAttribute="centerY" id="Dm9-4g-ywx"/>
-                                                <constraint firstAttribute="trailing" secondItem="glE-bp-CIF" secondAttribute="trailing" constant="16" id="JXu-PY-tak"/>
-                                                <constraint firstItem="glE-bp-CIF" firstAttribute="leading" secondItem="CyL-ia-5Zk" secondAttribute="trailing" constant="8" id="LJZ-Dz-OlO"/>
-                                                <constraint firstItem="CyL-ia-5Zk" firstAttribute="leading" secondItem="eUg-Jl-oRF" secondAttribute="leading" constant="16" id="Ugk-TV-IW7"/>
-                                                <constraint firstItem="glE-bp-CIF" firstAttribute="centerY" secondItem="eUg-Jl-oRF" secondAttribute="centerY" id="uVw-Rk-4TA"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="cardImage" destination="CyL-ia-5Zk" id="1zb-58-0MG"/>
-                                            <outlet property="cardNameLabel" destination="glE-bp-CIF" id="u26-Jr-zqF"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="i3N-eJ-dfP" id="dsa-p4-BWV"/>
                                     <outlet property="delegate" destination="i3N-eJ-dfP" id="RVg-wJ-4dS"/>

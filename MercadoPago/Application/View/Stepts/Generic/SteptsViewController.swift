@@ -1,34 +1,35 @@
 //
-//  BanksViewController.swift
+//  SteptsViewController.swift
 //  MercadoPago
 //
-//  Created by Andres Silva on 8/17/18.
+//  Created by Andres Silva on 8/20/18.
 //  Copyright © 2018 Andres Silva. All rights reserved.
 //
 
 import UIKit
 import DZNEmptyDataSet
 
-class BanksViewController: NextViewController {
+class SteptsViewController: NextViewController {
     @IBOutlet weak var tableView: UITableView!
 
-    private var viewModel: CollectionViewModel<Bank>!
+    var cellIdenIdentifier = "Cell"
+    var viewModel: CollectionViewModelInterface! {
+        didSet {
+            viewModel.delegate = self
+            viewModel.requestApi()
+        }
+    }
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-
         tableView.emptyDataSetSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
 
-        viewModel = CoordinatorViewModel.shared.banksViewModel
-        viewModel.delegate = self
-        viewModel.requestApi()
-
-        nextButton.setTitle("Select your bank provider", for: .disabled)
-        nextButton.setTitle("Next", for: .normal)
+        super.viewDidLoad()
     }
 }
 
-extension BanksViewController: CollectionViewModelDelegate {
+extension SteptsViewController: CollectionViewModelDelegate {
     func errorFetchingApi(_ error: Error) {
         banner(error: error)
     }
@@ -38,28 +39,29 @@ extension BanksViewController: CollectionViewModelDelegate {
     }
 }
 
-extension BanksViewController: UITableViewDelegate {
+extension SteptsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.select(at: indexPath)
         enableNextButton()
     }
 }
 
-extension BanksViewController: UITableViewDataSource {
+extension SteptsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfItems
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let identifier = "BankCell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? BankTableViewCell
-        cell?.setUp(with: viewModel.item(at: indexPath))
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdenIdentifier, for: indexPath)
+            as? SteptsTableViewCell
+        let item = viewModel.item(at: indexPath)
+        cell?.setUp(with: item)
         cell?.accessoryType = viewModel.isSelected(at: indexPath) ? .checkmark : .none
         return cell ?? UITableViewCell()
     }
 }
 
-extension BanksViewController: DZNEmptyDataSetSource {
+extension SteptsViewController: DZNEmptyDataSetSource {
     func customView(forEmptyDataSet scrollView: UIScrollView!) -> UIView! {
         return UIActivityIndicatorView(activityIndicatorStyle: .gray)
     }

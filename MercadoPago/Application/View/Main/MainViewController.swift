@@ -11,6 +11,11 @@ import UIKit
 class MainViewController: NextViewController {
     @IBOutlet weak var amonthTextField: UITextField!
     @IBOutlet weak var bottomLayout: NSLayoutConstraint!
+    @IBOutlet weak var completionView: UIView!
+
+    @IBOutlet weak var amonthLabel: UILabel!
+    @IBOutlet weak var franchiseLabel: UILabel!
+    @IBOutlet weak var bankLabel: UILabel!
 
     private var viewModel = CoordinatorViewModel.shared
 
@@ -37,17 +42,28 @@ class MainViewController: NextViewController {
         }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        completionView.isHidden = !viewModel.completed
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if viewModel.completed {
+            completionView.isHidden = false
             nextButton.setTitle("Pay", for: .normal)
             bottomLayout.constant = 0
             amonthTextField.resignFirstResponder()
         } else {
+            completionView.isHidden = true
             nextButton.setTitle("Enter your amounth", for: .disabled)
             nextButton.setTitle("Next", for: .normal)
             amonthTextField.becomeFirstResponder()
         }
+    }
+
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return !viewModel.completed
     }
 }
 

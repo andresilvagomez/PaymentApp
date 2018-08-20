@@ -60,16 +60,36 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ny1-mz-Xtw">
+                                <rect key="frame" x="0.0" y="140" width="375" height="578"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWo-J1-i7K">
+                                        <rect key="frame" x="140.66666666666666" y="30" width="94" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="fWo-J1-i7K" firstAttribute="top" secondItem="ny1-mz-Xtw" secondAttribute="top" constant="30" id="E86-N8-jhW"/>
+                                    <constraint firstItem="fWo-J1-i7K" firstAttribute="centerX" secondItem="ny1-mz-Xtw" secondAttribute="centerX" id="r94-u7-aFY"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6qk-Ec-0ZB" firstAttribute="trailing" secondItem="EEp-tk-Ir6" secondAttribute="trailing" id="Grh-E4-1Mv"/>
+                            <constraint firstItem="6qk-Ec-0ZB" firstAttribute="trailing" secondItem="ny1-mz-Xtw" secondAttribute="trailing" id="Knr-OF-FB3"/>
                             <constraint firstItem="EEp-tk-Ir6" firstAttribute="bottom" secondItem="6qk-Ec-0ZB" secondAttribute="bottom" id="LPW-aJ-7Ug"/>
                             <constraint firstItem="EEp-tk-Ir6" firstAttribute="leading" secondItem="6qk-Ec-0ZB" secondAttribute="leading" id="Ord-wt-NLh"/>
+                            <constraint firstItem="EEp-tk-Ir6" firstAttribute="top" secondItem="ny1-mz-Xtw" secondAttribute="bottom" id="QJB-Iw-8ZB"/>
                             <constraint firstItem="6qk-Ec-0ZB" firstAttribute="trailing" secondItem="2wF-uG-r8p" secondAttribute="trailing" constant="40" id="VfN-yX-nE2"/>
                             <constraint firstItem="2wF-uG-r8p" firstAttribute="leading" secondItem="6qk-Ec-0ZB" secondAttribute="leading" constant="40" id="gGd-Gj-kP8"/>
                             <constraint firstItem="2wF-uG-r8p" firstAttribute="top" secondItem="6qk-Ec-0ZB" secondAttribute="top" constant="40" id="hhA-q0-Yah"/>
+                            <constraint firstItem="ny1-mz-Xtw" firstAttribute="top" secondItem="6qk-Ec-0ZB" secondAttribute="top" id="lIG-Nj-NU6"/>
                             <constraint firstItem="pVz-3X-Bgi" firstAttribute="leading" secondItem="Hzp-7M-SEi" secondAttribute="leading" id="oIb-Ov-QcM"/>
+                            <constraint firstItem="ny1-mz-Xtw" firstAttribute="leading" secondItem="6qk-Ec-0ZB" secondAttribute="leading" id="sUh-Jj-uhA"/>
                             <constraint firstItem="pVz-3X-Bgi" firstAttribute="top" secondItem="EEp-tk-Ir6" secondAttribute="bottom" id="sfd-Az-hRK"/>
                             <constraint firstAttribute="trailing" secondItem="pVz-3X-Bgi" secondAttribute="trailing" id="vXI-VW-xrs"/>
                         </constraints>
@@ -79,6 +99,7 @@
                     <connections>
                         <outlet property="amonthTextField" destination="2wF-uG-r8p" id="Xnm-lQ-xEb"/>
                         <outlet property="bottomLayout" destination="LPW-aJ-7Ug" id="S8i-u2-pgT"/>
+                        <outlet property="completionView" destination="ny1-mz-Xtw" id="N0T-90-5VO"/>
                         <outlet property="nextButton" destination="EEp-tk-Ir6" id="IMC-n2-4I3"/>
                         <outlet property="nextView" destination="qqb-0E-2rP" id="OxX-QM-q9Y"/>
                     </connections>

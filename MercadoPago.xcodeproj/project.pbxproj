@@ -29,6 +29,12 @@
 		9F5EAF0821272D66003C38FA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5EAF0721272D66003C38FA /* MainViewController.swift */; };
 		9F5EAF0A21272FAE003C38FA /* Step3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5EAF0921272FAE003C38FA /* Step3.storyboard */; };
 		9F5EAF0C2127308E003C38FA /* CoordinatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5EAF0B2127308E003C38FA /* CoordinatorViewModel.swift */; };
+		9F8B3196212B22D50046D20D /* SteptsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8B3195212B22D50046D20D /* SteptsViewController.swift */; };
+		9F8B3198212B28490046D20D /* SteptsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8B3197212B28490046D20D /* SteptsTableViewCell.swift */; };
+		9F8B319A212B30110046D20D /* CollectionItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8B3199212B30110046D20D /* CollectionItemViewModel.swift */; };
+		9F8B319C212B3B130046D20D /* StepImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F8B319B212B3B130046D20D /* StepImageCell.xib */; };
+		9F8B319F212B3C950046D20D /* SubTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F8B319E212B3C950046D20D /* SubTitleCell.xib */; };
+		9F8B31A1212B3EB40046D20D /* UINib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8B31A0212B3EB40046D20D /* UINib.swift */; };
 		9FAAA69621268F49009005DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FAAA69521268F49009005DD /* Main.storyboard */; };
 		9FAAA69821268F82009005DD /* PaymentMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAAA69721268F82009005DD /* PaymentMethodsViewController.swift */; };
 		9FAAA69C21269729009005DD /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAAA69B21269729009005DD /* SwiftyJSON.framework */; };
@@ -36,8 +42,6 @@
 		9FAAA6A121269C3A009005DD /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAAA6A021269C3A009005DD /* UIImage.swift */; };
 		9FAAA6A321269C54009005DD /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAAA6A221269C54009005DD /* Kingfisher.framework */; };
 		9FAAA6A521269C58009005DD /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAAA6A221269C54009005DD /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9FAAA6A721269CEA009005DD /* CreditCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAAA6A621269CEA009005DD /* CreditCardTableViewCell.swift */; };
-		9FB1FC6021276386008B6326 /* BankTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1FC5F21276386008B6326 /* BankTableViewCell.swift */; };
 		9FB1FC6221276547008B6326 /* Installment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1FC6121276547008B6326 /* Installment.swift */; };
 		9FB1FC64212767BD008B6326 /* InstallmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1FC63212767BD008B6326 /* InstallmentViewController.swift */; };
 		9FB1FC6821276859008B6326 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1FC6721276859008B6326 /* CollectionViewModel.swift */; };
@@ -118,13 +122,17 @@
 		9F5EAF0721272D66003C38FA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9F5EAF0921272FAE003C38FA /* Step3.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Step3.storyboard; sourceTree = "<group>"; };
 		9F5EAF0B2127308E003C38FA /* CoordinatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorViewModel.swift; sourceTree = "<group>"; };
+		9F8B3195212B22D50046D20D /* SteptsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteptsViewController.swift; sourceTree = "<group>"; };
+		9F8B3197212B28490046D20D /* SteptsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteptsTableViewCell.swift; sourceTree = "<group>"; };
+		9F8B3199212B30110046D20D /* CollectionItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionItemViewModel.swift; sourceTree = "<group>"; };
+		9F8B319B212B3B130046D20D /* StepImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepImageCell.xib; sourceTree = "<group>"; };
+		9F8B319E212B3C950046D20D /* SubTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubTitleCell.xib; sourceTree = "<group>"; };
+		9F8B31A0212B3EB40046D20D /* UINib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINib.swift; sourceTree = "<group>"; };
 		9FAAA69521268F49009005DD /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9FAAA69721268F82009005DD /* PaymentMethodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsViewController.swift; sourceTree = "<group>"; };
 		9FAAA69B21269729009005DD /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		9FAAA6A021269C3A009005DD /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		9FAAA6A221269C54009005DD /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
-		9FAAA6A621269CEA009005DD /* CreditCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardTableViewCell.swift; sourceTree = "<group>"; };
-		9FB1FC5F21276386008B6326 /* BankTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTableViewCell.swift; sourceTree = "<group>"; };
 		9FB1FC6121276547008B6326 /* Installment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Installment.swift; sourceTree = "<group>"; };
 		9FB1FC63212767BD008B6326 /* InstallmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallmentViewController.swift; sourceTree = "<group>"; };
 		9FB1FC6721276859008B6326 /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
@@ -186,7 +194,6 @@
 			isa = PBXGroup;
 			children = (
 				9F2A3A7C212681A10076770E /* Api */,
-				9F2A3A7021267EC30076770E /* Resources */,
 				9F2A3A7421267EF50076770E /* Services */,
 				9F2A3A7321267EEF0076770E /* Models */,
 				9F2A3A7221267EE90076770E /* View */,
@@ -220,6 +227,7 @@
 				9FAAA6A021269C3A009005DD /* UIImage.swift */,
 				9FB1FC7121277B08008B6326 /* ViewController.swift */,
 				9FB1FC7721278ECC008B6326 /* Error.swift */,
+				9F8B31A0212B3EB40046D20D /* UINib.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -227,11 +235,8 @@
 		9F2A3A7221267EE90076770E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9FB1FC6B212772F6008B6326 /* Generics */,
 				9FAAA69421268F40009005DD /* Main */,
-				9F2A3A8321268BBB0076770E /* Step3 */,
-				9F2A3A8221268BB60076770E /* Step2 */,
-				9F2A3A8121268BAC0076770E /* Step1 */,
+				9F8B319D212B3BFB0046D20D /* Stepts */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 			children = (
 				9FB1FC6721276859008B6326 /* CollectionViewModel.swift */,
 				9F5EAF0B2127308E003C38FA /* CoordinatorViewModel.swift */,
+				9F8B3199212B30110046D20D /* CollectionItemViewModel.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -275,9 +281,8 @@
 		9F2A3A8121268BAC0076770E /* Step1 */ = {
 			isa = PBXGroup;
 			children = (
-				9FAAA69721268F82009005DD /* PaymentMethodsViewController.swift */,
-				9FAAA6A621269CEA009005DD /* CreditCardTableViewCell.swift */,
 				9F5EAF0521272CE6003C38FA /* Step1.storyboard */,
+				9FAAA69721268F82009005DD /* PaymentMethodsViewController.swift */,
 			);
 			path = Step1;
 			sourceTree = "<group>";
@@ -287,7 +292,6 @@
 			children = (
 				9F5EAEFF21272B69003C38FA /* Step2.storyboard */,
 				9F5EAF0121272BD9003C38FA /* BanksViewController.swift */,
-				9FB1FC5F21276386008B6326 /* BankTableViewCell.swift */,
 			);
 			path = Step2;
 			sourceTree = "<group>";
@@ -330,6 +334,7 @@
 			children = (
 				9F2A3A7121267ECD0076770E /* Extensions */,
 				9F2A3A6F21267EBA0076770E /* Base */,
+				9F2A3A7021267EC30076770E /* Resources */,
 				9F2A3A6E21267EAE0076770E /* Application */,
 			);
 			path = MercadoPago;
@@ -353,6 +358,17 @@
 			path = MercadoPagoUITests;
 			sourceTree = "<group>";
 		};
+		9F8B319D212B3BFB0046D20D /* Stepts */ = {
+			isa = PBXGroup;
+			children = (
+				9FB1FC6B212772F6008B6326 /* Generic */,
+				9F2A3A8321268BBB0076770E /* Step3 */,
+				9F2A3A8221268BB60076770E /* Step2 */,
+				9F2A3A8121268BAC0076770E /* Step1 */,
+			);
+			path = Stepts;
+			sourceTree = "<group>";
+		};
 		9FAAA69421268F40009005DD /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -362,12 +378,16 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		9FB1FC6B212772F6008B6326 /* Generics */ = {
+		9FB1FC6B212772F6008B6326 /* Generic */ = {
 			isa = PBXGroup;
 			children = (
+				9F8B319B212B3B130046D20D /* StepImageCell.xib */,
+				9F8B319E212B3C950046D20D /* SubTitleCell.xib */,
+				9F8B3195212B22D50046D20D /* SteptsViewController.swift */,
 				9F5EAF0321272C14003C38FA /* NextViewController.swift */,
+				9F8B3197212B28490046D20D /* SteptsTableViewCell.swift */,
 			);
-			path = Generics;
+			path = Generic;
 			sourceTree = "<group>";
 		};
 		F4948E7A70A785DB2EDCA18C /* Pods */ = {
@@ -493,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F3658ED2125EDC200A917C6 /* .swiftlint.yml in Resources */,
+				9F8B319C212B3B130046D20D /* StepImageCell.xib in Resources */,
 				9F5EAF0021272B69003C38FA /* Step2.storyboard in Resources */,
 				9F5EAF0621272CE6003C38FA /* Step1.storyboard in Resources */,
 				9FAAA69621268F49009005DD /* Main.storyboard in Resources */,
@@ -500,6 +521,7 @@
 				9F3658C42125ECF100A917C6 /* Assets.xcassets in Resources */,
 				9F5EAF0A21272FAE003C38FA /* Step3.storyboard in Resources */,
 				9F3658EB2125EDB600A917C6 /* Cartfile in Resources */,
+				9F8B319F212B3C950046D20D /* SubTitleCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,13 +617,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F8B3198212B28490046D20D /* SteptsTableViewCell.swift in Sources */,
 				9FAAA69821268F82009005DD /* PaymentMethodsViewController.swift in Sources */,
 				9FB1FC7221277B08008B6326 /* ViewController.swift in Sources */,
 				9F2A3A802126876D0076770E /* ApiDefinition.swift in Sources */,
 				9F5EAEFE212726F3003C38FA /* Color.swift in Sources */,
 				9F2A3A7821267F6E0076770E /* CreditCard.swift in Sources */,
 				9F2A3A7A212680A90076770E /* Bank.swift in Sources */,
-				9FB1FC6021276386008B6326 /* BankTableViewCell.swift in Sources */,
+				9F8B319A212B30110046D20D /* CollectionItemViewModel.swift in Sources */,
+				9F8B3196212B22D50046D20D /* SteptsViewController.swift in Sources */,
+				9F8B31A1212B3EB40046D20D /* UINib.swift in Sources */,
 				9F2A3A7E212681B10076770E /* Api.swift in Sources */,
 				9FB1FC7821278ECC008B6326 /* Error.swift in Sources */,
 				9F5EAF0C2127308E003C38FA /* CoordinatorViewModel.swift in Sources */,
@@ -612,7 +637,6 @@
 				9F5EAF0421272C14003C38FA /* NextViewController.swift in Sources */,
 				9F3658BD2125ECEF00A917C6 /* AppDelegate.swift in Sources */,
 				9FB1FC64212767BD008B6326 /* InstallmentViewController.swift in Sources */,
-				9FAAA6A721269CEA009005DD /* CreditCardTableViewCell.swift in Sources */,
 				9F5EAF0221272BD9003C38FA /* BanksViewController.swift in Sources */,
 				9FB1FC6221276547008B6326 /* Installment.swift in Sources */,
 			);
