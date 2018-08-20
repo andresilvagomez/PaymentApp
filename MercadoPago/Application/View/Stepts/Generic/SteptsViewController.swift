@@ -30,6 +30,15 @@ class SteptsViewController: NextViewController {
 }
 
 extension SteptsViewController: CollectionViewModelDelegate {
+    func selected(indexPath: IndexPath, unSelected: IndexPath?) {
+        if let unSelected = unSelected {
+            tableView.reloadRows(at: [indexPath, unSelected], with: .automatic)
+            return
+        }
+
+        tableView.reloadRows(at: [indexPath], with: .automatic)
+    }
+
     func errorFetchingApi(_ error: Error) {
         banner(error: error)
     }

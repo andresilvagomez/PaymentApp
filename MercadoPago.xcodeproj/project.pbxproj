@@ -194,7 +194,6 @@
 			isa = PBXGroup;
 			children = (
 				9F2A3A7C212681A10076770E /* Api */,
-				9F2A3A7421267EF50076770E /* Services */,
 				9F2A3A7321267EEF0076770E /* Models */,
 				9F2A3A7221267EE90076770E /* View */,
 			);
@@ -249,16 +248,6 @@
 				9FB1FC6121276547008B6326 /* Installment.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		9F2A3A7421267EF50076770E /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				9FB1FC6721276859008B6326 /* CollectionViewModel.swift */,
-				9F5EAF0B2127308E003C38FA /* CoordinatorViewModel.swift */,
-				9F8B3199212B30110046D20D /* CollectionItemViewModel.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		9F2A3A7521267F110076770E /* Images */ = {
@@ -361,12 +350,23 @@
 		9F8B319D212B3BFB0046D20D /* Stepts */ = {
 			isa = PBXGroup;
 			children = (
+				9F8B31A2212B5DA90046D20D /* ViewModels */,
 				9FB1FC6B212772F6008B6326 /* Generic */,
 				9F2A3A8321268BBB0076770E /* Step3 */,
 				9F2A3A8221268BB60076770E /* Step2 */,
 				9F2A3A8121268BAC0076770E /* Step1 */,
 			);
 			path = Stepts;
+			sourceTree = "<group>";
+		};
+		9F8B31A2212B5DA90046D20D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9FB1FC6721276859008B6326 /* CollectionViewModel.swift */,
+				9F5EAF0B2127308E003C38FA /* CoordinatorViewModel.swift */,
+				9F8B3199212B30110046D20D /* CollectionItemViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		9FAAA69421268F40009005DD /* Main */ = {

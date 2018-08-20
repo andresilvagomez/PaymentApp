@@ -11,6 +11,7 @@ import Foundation
 typealias CollectionModel = JSONMapper & Equatable
 
 protocol CollectionViewModelDelegate: class {
+    func selected(indexPath: IndexPath, unSelected: IndexPath?)
     func errorFetchingApi(_ error: Error)
     func reloadData()
 }
@@ -35,6 +36,7 @@ class CollectionViewModel<T: CollectionModel>: CollectionViewModelInterface {
     }
     private var request: ApiRequestProtocol
     private var api: Api
+    private var selectedIndexPath: IndexPath?
 
     weak var delegate: CollectionViewModelDelegate?
     var selectedHandler: ( (_ selected: T?) -> Void )?
@@ -71,7 +73,8 @@ class CollectionViewModel<T: CollectionModel>: CollectionViewModelInterface {
 
     func select(at indexPath: IndexPath) {
         selectedItem = items[indexPath.row]
-        delegate?.reloadData()
+        delegate?.selected(indexPath: indexPath, unSelected: selectedIndexPath)
+        selectedIndexPath = indexPath
     }
 
     func item(at indexPath: IndexPath) -> CollectionItemViewModel {
